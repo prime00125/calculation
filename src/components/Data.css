@@ -1,0 +1,95 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+}
+
+.left .right{
+  position: relative;
+}
+.checkout{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.data{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+
+}
+tr:hover {background-color: #9fff05;}
+input {border:none;height:20px;}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 4vh;
+  border : none;
+  background-color: grey;
+  color:white;
+  border-radius: 50px;
+}
+.lowerpart{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* table style */
+.category-container {
+  height: 70vh;/* 50% of the viewport width */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  border: 1px solid black;
+}
+
+.category {
+  width: 100%; /* Table takes full width of its container */
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.category th, .category td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.category th {
+  background-color: #f2f2f2;
+}
+
+.category input, .category select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.category td input, .category td select {
+  border: none;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.category td input:focus, .category td select:focus {
+  outline: none;
+}
