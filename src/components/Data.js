@@ -124,10 +124,14 @@ function Data() {
 
     const totalValue = subtotalValue + cgstAmount + sgstAmount;
 
+    const roundOff = Math.round(totalValue)
+    setRoundOff(roundOff.toFixed(2))
+
     setCgst(cgstAmount.toFixed(2));
     setSgst(sgstAmount.toFixed(2));
-    setTotal(totalValue.toFixed(2));
-    const words = Math.floor(totalValue)
+    setTotal(roundOff);
+    const words = roundOff
+
      // Convert total amount to words and set it
      setTotalInWords(numberToWords(words));
   };
@@ -139,13 +143,13 @@ function Data() {
       </div>
       <div className="header">
         <div className="left">
-          <label> Customer Name </label>
+          <label> Customer Name : </label>
           <input type="text" name="name" placeholder="Enter Name" /> <br />
-          <label>Customer </label>
+          <label>Customer : </label>
           <input type="text" placeholder="Customer" />
         </div>
         <div className="right">
-          <label>Date</label>
+          <label>Date : </label>
           <input type="date" id="date" />
         </div>
       </div>
@@ -289,14 +293,14 @@ function Data() {
         <div className="data">
         SGST 1.5% = <input type="text" value={sgst} readOnly />
         </div>
-        {/* <div className="data">
+        <div className="data">
         Round off{" "} =
         <input
           type="text"
           value={roundOff}
           onChange={(e) => setRoundOff(e.target.value)}
         />
-        </div> */}
+        </div>
         <div className="data">
         Total = <input type="text" value={total} readOnly />
         </div>
